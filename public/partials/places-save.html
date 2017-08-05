@@ -1,0 +1,77 @@
+<div ng-controller="PlaceController" layout="column" layout-padding ng-cloak>
+
+  <span ng-show="mensagem.length" class="alert alert-info">{{mensagem}}</span>
+  <br/>
+  <md-content class="md-no-momentum">
+	<form novalidate name="placeForm">
+    <md-input-container class="md-icon-float md-block">
+      <!-- Use floating label instead of placeholder -->
+      <label>LocationName</label>
+      <!-- <md-icon md-svg-src="img/icons/ic_restaurant_black_24px.svg" class="name"></md-icon> -->
+	  <input ng-model="place.locationName" type="text" required minlength="5" >
+        <div ng-messages="placeForm.locationName.$error">
+          <div ng-message="required">This is required.</div>
+          <div ng-message="minlength">The description must be at lest 05 characters long.</div>
+        </div>	  
+	</md-input-container>
+	
+
+    <md-input-container md-no-float class="md-block">
+      <!-- <md-icon md-svg-src="img/icons/ic_description_black_24px.svg"></md-icon> -->
+      <input ng-model="place.description" type="text" placeholder="Description">
+	</md-input-container>
+	
+    <md-input-container md-no-float class="md-block">
+      <!-- <md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon> -->
+      <input ng-model="place.zipCode" type="text" placeholder="ZipCode">
+	</md-input-container>	
+	
+    <md-input-container md-no-float class="md-block">
+      <!-- <md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon> -->
+      <input ng-model="place.province" type="text" placeholder="Province">
+	</md-input-container>	
+	
+    <md-input-container md-no-float class="md-block">
+      <!-- <md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon> -->
+      <input ng-model="place.country" type="text" placeholder="Country">
+	</md-input-container>
+	
+    <md-input-container md-no-float class="md-block">
+      <!-- <md-icon md-svg-src="img/icons/ic_phone_24px.svg"></md-icon> -->
+      <input ng-model="place.city" type="text" placeholder="City">
+	</md-input-container>	
+	
+<!-- Use floating placeholder instead of label -->
+<!--	  
+    <md-input-container class="md-block">
+     
+      <md-icon md-svg-src="img/icons/ic_email_24px.svg" class="email"></md-icon>
+      <input ng-model="place.email" type="email" placeholder="Email (required)" ng-required="true">
+	</md-input-container>
+-->	
+
+    <md-input-container md-no-float class="md-block">
+      <input ng-model="place.address" type="text" placeholder="Address" >
+      <!-- <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon> -->
+	</md-input-container>
+	
+  <md-input-container md-no-float class="md-block">
+      <input ng-model="latitude" type="text" placeholder="Latitude" >
+      <!-- <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon> -->
+  </md-input-container>
+    
+    <md-input-container md-no-float class="md-block">
+      <input ng-model="longitude" type="text" placeholder="Longitude" >
+      <!-- <md-icon md-svg-src="img/icons/ic_place_24px.svg" style="display:inline-block;"></md-icon> -->
+	</md-input-container>
+
+	<!-- Photo Upload -->	
+	 <md-input-container md-no-float class="md-block">		  
+		   <lf-ng-md-file-input lf-files='files' multiple> </lf-ng-md-file-input>		
+	</md-input-container>
+			
+  <md-button ng-click="submitForm()" class="md-raised md-primary" ng-disabled="placeForm.$invalid">Save</md-button>
+  <md-button href="/#!/places/query" class="md-raised md-warn">Query</md-button>
+	</form>
+  </md-content>
+</div>

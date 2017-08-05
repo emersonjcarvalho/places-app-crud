@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PlaceApp</title>
+
+		<link rel="stylesheet" href="css/main.css">
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.min.css">
+
+		<link rel="stylesheet" href="css/lf-ng-md-file-input.css">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-animate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-route.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-resource.min.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-aria.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.6.4/angular-messages.min.js"></script>		
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.4/angular-material.min.js"></script>
+						
+		<!-- 
+			Angular Material Fileinput
+			https://github.com/shuyu/angular-material-fileinput
+		 -->		
+		<script src="js/lib/lf-ng-md-file-input.js"></script>	
+				
+		<script src="js/lib/angularjs-geolocation.min.js"></script>
+		
+		<script src="js/main.js"></script>
+		<script src="js/controllers/places-list-controller.js"></script>
+		<script src="js/controllers/places-save-controller.js"></script>
+		<script src="js/controllers/places-query-controller.js"></script>
+						
+		<script src="js/services/places-service.js"></script>        
+	</head>
+	<body ng-app="placeApp" ng-cloak>
+		<div class="container">
+
+			<ng-view></ng-view>
+
+		</div>      
+	</body>
+</html>
